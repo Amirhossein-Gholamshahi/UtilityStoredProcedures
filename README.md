@@ -12,7 +12,7 @@ The `GenerateInsertScript` stored procedure generates `INSERT` scripts for the e
 
 ```sql
 EXEC [dbo].[GenerateInsertScript] @FullTableName = 'SchemaName.TableName'
-
+```
 ### Important Note: Handling Identity Columns
 
 If the table you're generating the `INSERT` script for contains an **Identity** column, you must temporarily enable **Identity Insert** to allow the insertion of specific identity values.
@@ -28,3 +28,4 @@ SET IDENTITY_INSERT [SchemaName].[TableName] ON
 -- Insert statements
 
 SET IDENTITY_INSERT [SchemaName].[TableName] OFF
+```
