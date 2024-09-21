@@ -29,3 +29,18 @@ SET IDENTITY_INSERT [SchemaName].[TableName] ON
 
 SET IDENTITY_INSERT [SchemaName].[TableName] OFF
 ```
+
+# 2.FindKeyWordInTable Stored Procedure
+
+## Overview
+The `FindKeyWordInTable` stored procedure allows you to search for a specified keyword across all columns of a given table in a SQL Server database. This procedure returns the first row where the keyword is found, or indicates if no results are found.
+
+## Parameters
+- `@KeyWord NVARCHAR(MAX)`: The keyword to search for within the table.
+- `@FullTableName VARCHAR(max)`: The full name of the table in the format `SchemaName.TableName`.
+
+## Usage
+To execute the stored procedure, use the following SQL command:
+
+```sql
+EXEC [dbo].[FindKeyWordInTable] @KeyWord = 'your_keyword', @FullTableName = 'your_schema.your_table';
