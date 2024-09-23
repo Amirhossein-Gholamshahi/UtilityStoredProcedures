@@ -4,7 +4,7 @@ This repository contains a collection of utility stored procedures to help manag
 
 ## Stored Procedures
 
-### 1. **GenerateInsertScript**
+# 1. **GenerateInsertScript**
 
 The `GenerateInsertScript` stored procedure generates `INSERT` scripts for the entire dataset of a specified table. This is useful when you want to replicate data from one table or environment to another.
 
