@@ -1,1 +1,2 @@
-UtilityStoredProcedures/* linguist-language=TSQL
+* linguist-language=TSQL
+
