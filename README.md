@@ -44,3 +44,19 @@ To execute the stored procedure, use the following SQL command:
 
 ```sql
 EXEC [dbo].[FindKeyWordInTable] @KeyWord = 'your_keyword', @FullTableName = 'your_schema.your_table';
+```
+
+# 3. **FindById Stored Procedure**
+
+## Overview
+The `FindById` stored procedure retrieves a row from a specified table in a SQL Server database based on the primary key value. This procedure dynamically identifies the primary key column of the target table, formats the input value based on the primary key's data type, and returns the corresponding row if found.
+
+## Parameters
+- `@FullTableName VARCHAR(MAX)`: The full name of the table in the format `SchemaName.TableName`.
+- `@id NVARCHAR(MAX)`: The primary key value to search for within the specified table.
+
+## Usage
+To execute the stored procedure, use the following SQL command:
+
+```sql
+EXEC [dbo].[FindById] @FullTableName = 'your_schema.your_table', @id = 'your_primary_key_value';
